@@ -1,7 +1,7 @@
 # Epoxy Resin Volume Calculator
 Add this script to generate the volume calculator, preferably on footer section inside the <code>&lt;body&gt;</code> tag:
 ```
-<script type="text/javascript" src="./bin/js/epoxyresincalculator.js"></script>
+<script type="text/javascript" src="./index.js"></script>
 ```
 and then use this element as container:
 ```
