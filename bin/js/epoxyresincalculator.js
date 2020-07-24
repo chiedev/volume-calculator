@@ -1,16 +1,17 @@
+
 const calculatorHTML = `<h2>Epoxy Resin Volume Calculator</h2>
                         <h4>What are the dimensions of your project?</h4>
                         <div class="inline-block">
                             <label for="length">Length (in)</label>
-                            <input id="length" type="number" value="12">
+                            <input id="length" type="number" value="0">
                         </div>
                         <div class="inline-block">
                             <label for="width">Width (in)</label>
-                            <input id="width" type="number" value="12">
+                            <input id="width" type="number" value="0">
                         </div>
                         <div class="inline-block">
                             <label for="thickness">Thickness (in)</label>
-                            <input id="thickness" type="number" value=".5">
+                            <input id="thickness" type="number" value="0">
                         </div>
 
                         <table>
@@ -36,25 +37,25 @@ const calculatorHTML = `<h2>Epoxy Resin Volume Calculator</h2>
                         <h4>Here is the volume of your project</h4>
                         <div class="inline-block">
                             <label for="output">Cubic Inches</label>
-                            <input id="cubicInches" type="number" disabled value="74.43">
+                            <input id="cubicInches" type="number" disabled value="0">
                         </div>
                         <div class="inline-block">
                             <label for="output">Cubic Feet</label>
-                            <input id="cubicFeet" type="number" disabled value="74.43">
+                            <input id="cubicFeet" type="number" disabled value="0">
                         </div>
 
                         <h4>Here is the amount of epoxy resin you will need</h4>
                         <div class="inline-block">
                             <label for="output">Ounces</label>
-                            <input id="ounces" type="number" disabled value="74.43">
+                            <input id="ounces" type="number" disabled value="0">
                         </div>
                         <div class="inline-block">
                             <label for="output">Liters</label>
-                            <input id="liters" type="number" disabled value="74.43">
+                            <input id="liters" type="number" disabled value="0">
                         </div>
                         <div class="inline-block">
                             <label for="output">Gallons</label>
-                            <input id="gallons" type="number" disabled value="74.43">
+                            <input id="gallons" type="number" disabled value="0">
                         </div>`;
 document.getElementById('epoxyResinVolumeCalculator').innerHTML = calculatorHTML;
 var cssId = 'ERVCalculator';
@@ -77,7 +78,6 @@ const   vLength         = document.getElementById('length'),
         liters          = document.getElementById('liters'),
         gallons         = document.getElementById('gallons'),
         volume_array    = [vLength, vWidth, vThickness];
-
 for (let i = 0; i <= volume_array.length - 1; i++)
 volume_array[i].addEventListener('change', event => {
     cubicInches.value   = (Number.isInteger(vLength.value * vWidth.value * vThickness.value) === true) ? (vLength.value * vWidth.value * vThickness.value) : (vLength.value * vWidth.value * vThickness.value).toFixed(2);
@@ -85,4 +85,4 @@ volume_array[i].addEventListener('change', event => {
     ounces.value        = (Number.isInteger(cubicInches.value / 1.805) === true) ? (cubicInches.value / 1.805) : (cubicInches.value / 1.805).toFixed(2);
     liters.value        = (Number.isInteger(cubicInches.value / 61.024) === true) ? (cubicInches.value / 61.024) : (cubicInches.value / 61.024).toFixed(2);
     gallons.value       = (Number.isInteger(cubicInches.value / 231) === true) ? (cubicInches.value / 231) : (cubicInches.value / 231).toFixed(2);
-})  
+})
