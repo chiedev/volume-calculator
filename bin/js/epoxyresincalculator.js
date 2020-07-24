@@ -79,7 +79,7 @@ const   vLength         = document.getElementById('length'),
         gallons         = document.getElementById('gallons'),
         volume_array    = [vLength, vWidth, vThickness];
 for (let i = 0; i <= volume_array.length - 1; i++)
-volume_array[i].addEventListener('change', event => {
+volume_array[i].addEventListener('keyup', event => {
     cubicInches.value   = (Number.isInteger(vLength.value * vWidth.value * vThickness.value) === true) ? (vLength.value * vWidth.value * vThickness.value) : (vLength.value * vWidth.value * vThickness.value).toFixed(2);
     cubicFeet.value     = (Number.isInteger(cubicInches.value / 1728) === true) ? (cubicInches.value / 1728) : (cubicInches.value / 1728).toFixed(2);
     ounces.value        = (Number.isInteger(cubicInches.value / 1.805) === true) ? (cubicInches.value / 1.805) : (cubicInches.value / 1.805).toFixed(2);
