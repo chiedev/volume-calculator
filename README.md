@@ -8,4 +8,4 @@ and then use this element as container:
 <div id="epoxyResinVolumeCalculator" class="ERVcalculator"></div>
 ```
 
-Check the demo here: [Epoxy Resin Volume Calculator Demo](https://chiedev.github.io/epoxy-resin-volume-calculator/)
+Check the demo here: [Epoxy Resin Volume Calculator Demo](https://chiedev.github.io/volume-calculator/)
