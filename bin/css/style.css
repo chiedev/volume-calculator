@@ -1,0 +1,39 @@
+.ERVcalculator {
+  background-color: #F6F6F6;
+  padding: 1em 2em 2em;
+  border-radius: .5em;
+  display: block;
+  opacity: .9;
+  max-width: 500px;
+}
+.ERVcalculator input {
+  max-width: 100px;
+  line-height: 2em;
+}
+.ERVcalculator input[disabled] {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  display: inline-block;
+}
+.ERVcalculator label {
+  margin-bottom: .5em;
+  display: block;
+}
+.ERVcalculator label[for=output] {
+  margin-bottom: 0;
+}
+.ERVcalculator .inline-block {
+  max-width: 125px;
+  display: inline-block;
+}
+.ERVcalculator table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em auto 3em;
+}
+.ERVcalculator table tr td {
+  border-bottom: solid thin #333333;
+  height: 3em;
+}
